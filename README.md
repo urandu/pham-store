@@ -13,3 +13,7 @@ This is the backend for pharm-store
 ### API swagger documentation
 
 - Swagger API doc located at http://localhost:8900/swagger
+
+#### TODO
+ - Add authentication
+ 
