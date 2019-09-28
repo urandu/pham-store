@@ -23,6 +23,6 @@ class Equipment(models.Model):
     created_by = models.ForeignKey( User, null=True,on_delete=models.SET_NULL)
     created_at = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    approved_by = models.ForeignKey( User, null=True,on_delete=models.SET_NULL)
+    approved_by = models.ForeignKey( User, null=True,on_delete=models.SET_NULL, related_name="approved_by")
     institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
 
