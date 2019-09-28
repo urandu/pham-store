@@ -17,7 +17,7 @@ class Institution(models.Model):
 class Equipment(models.Model):
     name = models.CharField(max_length=100)
     quantity = models.IntegerField()
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL)
     created_at = models.DateTimeField(auto_now_add=True)
     institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
 
