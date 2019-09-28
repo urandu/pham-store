@@ -5,7 +5,9 @@ from rest_framework import generics
 
 class InstitutionListCreate(generics.ListCreateAPIView):
     queryset = Institution.objects.all()
-
     serializer_class = InstitutionSerializer
 
-# Create your views here.
+class InstitutionListCreate(generics.ListCreateAPIView):
+    queryset = Institution.objects.all()
+    serializer_class = InstitutionSerializer
+
