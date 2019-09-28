@@ -9,7 +9,7 @@ class InstitutionSerializer(serializers.ModelSerializer):
         fields = ('name', 'industry', 'contact_person')
 
 class EquipmentSerializer(serializers.ModelSerializer):
-    inst = serializers.HyperlinkedRelatedField()
+    inst = serializers.HyperlinkedRelatedField(view_name='institution_name')
     class Meta:
         model = Equipment
         # fields = ('name', 'quantity', 'created_by', 'institution')
