@@ -12,4 +12,4 @@ class EquipmentSerializer(serializers.ModelSerializer):
     institution_name = serializers.RelatedField(source='institution', read_only=True)
     class Meta:
         model = Equipment
-        fields = ('name', 'quantity', 'created_by')
+        fields = ('name', 'quantity', 'created_by', 'institution_name')
