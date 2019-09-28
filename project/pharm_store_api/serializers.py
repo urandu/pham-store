@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from project.pharm_store_api.models import Institution, Equipment
+from pharm_store_api.models import Institution, Equipment
 
 
 class InstitutionSerializer(serializers.ModelSerializer):
