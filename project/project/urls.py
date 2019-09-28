@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pharm_store_api.urls')),
+    path('api/v1/', include('pharm_store_api.urls')),
 ]
