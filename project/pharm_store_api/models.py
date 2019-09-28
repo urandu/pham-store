@@ -7,4 +7,4 @@ class Institution(models.Model):
         ('hospital',"hospital"),
         ('pharmacy',"pharmacy"),
     )
-    name = models.C
+    name = models.CharField()
