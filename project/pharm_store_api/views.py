@@ -9,6 +9,7 @@ class InstitutionListCreate(generics.ListCreateAPIView):
     serializer_class = InstitutionSerializer
 
 class EquipmentListCreate(generics.ListCreateAPIView):
+    Equipment.objects.all().delete()
     queryset = Equipment.objects.all()
     serializer_class = EquipmentSerializer
     filter_backends = [DjangoFilterBackend]
