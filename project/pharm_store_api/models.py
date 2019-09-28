@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Institution(models.Model):
@@ -16,5 +17,7 @@ class Institution(models.Model):
 class Equipment(models.Model):
     name = models.CharField(max_length=100)
     quantity = models.IntField()
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User)
     created_at = models.DateTimeField(auto_now_add=True)
+    institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
+
