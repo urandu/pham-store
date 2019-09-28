@@ -6,9 +6,10 @@ from pharm_store_api.models import Institution, Equipment
 class InstitutionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Institution
-        fields = '__all__'
+        fields = ('name', 'industry', 'contact_person')
 
 class EquipmentSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Equipment
-        fields = '__all__'
+        fields = ('name', 'industry', 'contact_person')
