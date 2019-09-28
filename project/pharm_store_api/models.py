@@ -15,6 +15,6 @@ class Institution(models.Model):
 
 class Equipment(models.Model):
     name = models.CharField(max_length=100)
-    name = models.CharField(max_length=100)
-    name = models.CharField(max_length=100)
+    quantity = models.IntField()
+    created_by = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
