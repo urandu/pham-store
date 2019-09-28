@@ -13,4 +13,4 @@ class EquipmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Equipment
         # fields = ('name', 'quantity', 'created_by', 'institution')
-        fields = ('name', 'quantity', 'created_by', 'institution_name')
+        fields = '__all__'
