@@ -7,4 +7,6 @@ class Institution(models.Model):
         ('hospital',"hospital"),
         ('pharmacy',"pharmacy"),
     )
-    name = models.CharField()
+    name = models.CharField(max_length=100)
+    industry = models.CharField(max_length=100, choices=INSTITUTION_TYPE)
+    contact_person = models.CharField(max_length=100)
