@@ -12,7 +12,7 @@ class EquipmentListCreate(generics.ListCreateAPIView):
     queryset = Equipment.objects.all()
     serializer_class = EquipmentSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['category', 'in_stock']
+    filterset_fields = ['institution', 'created_at']
 
 class EquipmentRetrieveUpdate(generics.RetrieveUpdateDestroyAPIView):
     queryset = Equipment.objects.all()
