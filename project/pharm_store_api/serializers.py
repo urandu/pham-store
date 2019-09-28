@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from pharm_store_api.models import Institution, Equipment
+
+from project.pharm_store_api.models import Institution, Equipment
+
 
 class InstitutionSerializer(serializers.ModelSerializer):
     class Meta:
