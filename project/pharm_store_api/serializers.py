@@ -9,7 +9,7 @@ class InstitutionSerializer(serializers.ModelSerializer):
         fields = ('name', 'industry', 'contact_person')
 
 class EquipmentSerializer(serializers.ModelSerializer):
-    institution = serializers.RelatedField(source='institution.name', read_only=True)
+    institution = serializers.ReadOnlyField(source='institution.name')
     class Meta:
         model = Equipment
         fields = ('name', 'quantity', 'created_by', 'institution')
