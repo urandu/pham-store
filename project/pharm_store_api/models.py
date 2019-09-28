@@ -21,7 +21,7 @@ class Equipment(models.Model):
     name = models.CharField(max_length=100)
     quantity = models.IntegerField()
     created_by = models.ForeignKey( User, null=True,on_delete=models.SET_NULL, related_name="created_by")
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     approved_by = models.ForeignKey( User, null=True,on_delete=models.SET_NULL, related_name="approved_by")
     institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
