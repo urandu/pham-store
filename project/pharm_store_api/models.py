@@ -10,3 +10,5 @@ class Institution(models.Model):
     name = models.CharField(max_length=100)
     industry = models.CharField(max_length=100, choices=INSTITUTION_TYPE)
     contact_person = models.CharField(max_length=100)
+    mobile_number = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_add_now=True)
